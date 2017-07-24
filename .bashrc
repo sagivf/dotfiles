@@ -105,6 +105,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/dev/dotfiles/.bash_aliases.sh ]; then
+    source ~/dev/dotfiles/.bash_aliases.sh
+fi
 if [ -f ~/dev/dotfiles/.bash_colors.sh ]; then
     source ~/dev/dotfiles/.bash_colors.sh
 fi
@@ -125,9 +128,6 @@ if [ -f ~/dev/dotfiles/.npm-completion.sh ]; then
 fi
 if [ -f ~/dev/dotfiles/.angular-cli.sh ]; then
     source ~/dev/dotfiles/.angular-cli.sh
-fi
-if [ -f ~/dev/dotfiles/seebo_env/.variables.sh ]; then
-    source ~/dev/dotfiles/seebo_env/.variables.sh
 fi
 
 # enable programmable completion features (you don't need to enable

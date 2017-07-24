@@ -1,27 +1,32 @@
-if [ -f ~/dotfiles/.bashrc ]; then
-source ~/dotfiles/.bashrc
-fi
-if [ -f ~/dotfiles/.bash_colors ]; then
-source ~/dotfiles/.bash_colors
-fi
-if [ -f ~/dotfiles/.bash_marks.sh ]; then
-source ~/dotfiles/.bash_marks.sh
-fi
-if [ -f ~/dotfiles/.git-prompt.sh ]; then
-source ~/dotfiles/.git-prompt.sh
-fi
-if [ -f ~/dotfiles/.git-completion.sh ]; then
-source ~/dotfiles/.git-completion.sh
-fi
-if [ -f ~/dotfiles/.git-flow-completion.bash ]; then
-source ~/dotfiles/.git-flow-completion.bash
-fi
-if [ -f ~/dotfiles/.npm-completion.bash ]; then
-source ~/dotfiles/.npm-completion.bash
-fi
-if [ -f ~/dotfiles/.angular-cli.sh ]; then
-source ~/dotfiles/.angular-cli.sh
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
 fi
 
-PHP_AUTOCONF="/usr/local/bin/autoconf"
-source ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/dev/dotfiles/.bash_aliases.sh ]; then
+    source ~/dev/dotfiles/.bash_aliases.sh
+fi
+if [ -f ~/dev/dotfiles/.bash_colors.sh ]; then
+    source ~/dev/dotfiles/.bash_colors.sh
+fi
+if [ -f ~/dev/dotfiles/.bash_marks.sh ]; then
+    source ~/dev/dotfiles/.bash_marks.sh
+fi
+if [ -f ~/dev/dotfiles/.git-prompt.sh ]; then
+    source ~/dev/dotfiles/.git-prompt.sh
+fi
+if [ -f ~/dev/dotfiles/.git-completion.sh ]; then
+    source ~/dev/dotfiles/.git-completion.sh
+fi
+if [ -f ~/dev/dotfiles/.git-flow-completion.sh ]; then
+    source ~/dev/dotfiles/.git-flow-completion.sh
+fi
+if [ -f ~/dev/dotfiles/.npm-completion.sh ]; then
+    source ~/dev/dotfiles/.npm-completion.sh
+fi
+if [ -f ~/dev/dotfiles/.angular-cli.sh ]; then
+    source ~/dev/dotfiles/.angular-cli.sh
+fi
