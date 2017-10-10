@@ -1,7 +1,12 @@
+#!/usr/bin/env bash
+
+alias n=nanobox
+
 ## Node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export NODE_ENV="development"
+
 
 ## Android
 export ANDROID_HOME=$HOME/Android/Sdk
