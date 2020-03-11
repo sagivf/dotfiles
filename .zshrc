@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
+eval "$(pyenv init -)"
 
 if [ -f ~/dev/dotfiles/.bash_aliases.sh ]; then
     source ~/dev/dotfiles/.bash_aliases.sh

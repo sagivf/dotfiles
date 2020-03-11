@@ -28,3 +28,26 @@ export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
 INDEXER_AC_BASH_SETUP_PATH=/Users/sagiv.frankel/Library/Caches/indexer/autocomplete/bash_setup && test -f $INDEXER_AC_BASH_SETUP_PATH && source $INDEXER_AC_BASH_SETUP_PATH;
 # indexer autocomplete setup
 INDEXER_AC_ZSH_SETUP_PATH=/Users/sagiv.frankel/Library/Caches/indexer/autocomplete/zsh_setup && test -f $INDEXER_AC_ZSH_SETUP_PATH && source $INDEXER_AC_ZSH_SETUP_PATH;
+
+
+export REDSHIFT_USER=""
+export REDSHIFT_PASSWORD=""
+export ARTIFACTORY_USER=
+export ARTIFACTORY_APIKEY=
+
+
+alias okta-aws='f(){ cmd="docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/okta-aws sh -c \"python /package/samlapi.py "$@"\""; bash -c "${cmd}" unset -f f; }; f'
+
+
+refresh-creds (){
+okta-aws
+export AWS_ACCESS_KEY_ID=`aws configure get saml.aws_access_key_id`
+export AWS_SECRET_ACCESS_KEY=`aws configure get saml.aws_secret_access_key`
+export AWS_SESSION_TOKEN=`aws configure get saml.aws_session_token`
+}
+
+make-airflow(){
+make
+make up
+make ui
+}
