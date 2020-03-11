@@ -36,7 +36,7 @@ export ARTIFACTORY_USER=
 export ARTIFACTORY_APIKEY=
 
 
-alias okta-aws='f(){ cmd="docker run -it --rm -v ~/.aws:/package/.aws quay.io/wework/okta-aws sh -c \"python /package/samlapi.py "$@"\""; bash -c "${cmd}" unset -f f; }; f'
+alias okta-aws='f(){ cmd="docker run -it --rm -v ~/.aws:/package/.aws quay.io/xxxxxxx sh -c \"python /package/samlapi.py "$@"\""; bash -c "${cmd}" unset -f f; }; f'
 
 
 refresh-creds (){
